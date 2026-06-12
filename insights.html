@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Insights — Nour Eldin Khater</title>
-  <meta name="description" content="How Nour Eldin Khater thinks about data: validate before you analyse, detractor rate beats averages, discounting is the silent profit leak, and AI text mining finds the why behind the score.">
+  <meta name="description" content="How Nour Eldin Khater thinks about data: validate before you analyse, find the one lever behind the problem, check margin not just revenue, and never trust a calm average.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -46,46 +46,56 @@
       <article class="insight reveal">
         <p class="insight-num">01</p>
         <h2>Validate before you analyse — half a dataset can be fake</h2>
-        <p>In my bike sales audit, ~50% of 113,000 rows turned out to be fabricated. A
-          simple calendar fact exposed it: real multi-year sales data has transactions
-          on 29 February, and the fake rows didn't. If I had skipped the audit, every
-          chart would have been polished, confident — and wrong. Now no analysis of mine
-          starts before the data has earned my trust.</p>
+        <p>In my bike sales audit, the numbers looked fine at first glance. Then one
+          simple question broke the whole thing open: <em>where are the February 29th
+          sales?</em> Real multi-year sales data always has leap-day transactions — and
+          a huge block of my 113,000 rows had none. Row-matching confirmed it: roughly
+          half the dataset was fabricated, copied from real rows with the values
+          changed. If I had jumped straight to charts, every one of them would have been
+          polished, confident — and wrong. Since that day, no dataset gets a dashboard
+          from me before it earns my trust.</p>
         <p class="insight-source">From the <a href="project-bikes.html">Bike Sales Profitability Audit</a></p>
       </article>
 
       <article class="insight reveal">
         <p class="insight-num">02</p>
-        <h2>Detractor rate catches failing hotels faster than averages</h2>
-        <p>Averages are slow. A hotel can absorb hundreds of furious reviews and barely
-          move its mean score, because the happy majority dilutes the signal. The share
-          of clearly unhappy guests — the detractor rate — reacts immediately. Across
-          626 hotels, it flagged properties in trouble while their averages still looked
-          respectable; at the worst hotel, 90% of all reviews were 1–2 stars. Choose
-          metrics for how fast they detect change, not how familiar they look.</p>
-        <p class="insight-source">From the <a href="project-hotels.html">Hotel Reputation Analysis</a></p>
+        <h2>Don't just describe the problem — find the lever</h2>
+        <p>"Revenue is down 13%" is a fact. It's not a finding. In my Amazon analysis,
+          revenue was falling month after month, and the easy move was to report twenty
+          observations and let the stakeholder sort it out. Digging deeper showed that
+          one category — 'Set', half the business — was behind roughly 81% of the entire
+          drop. That one number changes the meeting: instead of "sales are declining,"
+          the conversation becomes "fix this one category and you recover most of the
+          loss." Stakeholders don't need more charts. They need to know which lever to
+          pull first.</p>
+        <p class="insight-source">From the <a href="project-amazon.html">Amazon Sales Analysis</a></p>
       </article>
 
       <article class="insight reveal">
         <p class="insight-num">03</p>
-        <h2>Discounting is the silent profit leak</h2>
-        <p>Discounts feel like a growth lever because revenue keeps climbing. The margin
-          tells another story: in my bike sales analysis, profitability eroded from 51%
-          at full price to 31% at deep discounts — and the bestselling product wasn't
-          the most profitable one (helmets, at ~59% margin, out-earned the bikes).
-          Revenue dashboards hide this; margin dashboards expose it.</p>
+        <h2>Discounting looks like growth — until you check the margin</h2>
+        <p>Revenue dashboards love discounts: every promotion makes the line go up, so
+          discounting feels like a growth lever. The margin tells a different story. On
+          verified bike sales data, profitability fell from 51% at full price to 31% at
+          deep discounts — the business was buying volume and quietly paying for it in
+          profit. And the bestseller wasn't the best earner: helmets made ~59% margin
+          while the bikes themselves did the heavy, low-margin lifting. If you only
+          track revenue, discounting looks like success. Track margin, and it's often a
+          leak.</p>
         <p class="insight-source">From the <a href="project-bikes.html">Bike Sales Profitability Audit</a></p>
       </article>
 
       <article class="insight reveal">
         <p class="insight-num">04</p>
-        <h2>The numbers say "what" — only the text says "why"</h2>
-        <p>A 2-star rating tells you a guest is unhappy, not what to fix. Mining ~35,000
-          free-text reviews with AI assistance turned vague unhappiness into a ranked,
-          fixable list — with the hygiene-and-condition cluster (cleanliness, bathrooms,
-          smell, bugs) far outweighing everything else. Unstructured text is where the
-          actionable insight lives, and modern AI tooling finally makes it cheap to
-          harvest at scale.</p>
+        <h2>A calm average can hide a crisis</h2>
+        <p>Across 626 hotels, guest satisfaction sat at 3.76 out of 5 — flat and stable
+          for years. No alarm bells anywhere. But that average was blending two very
+          different realities: upscale brands performing beautifully, and a group of
+          budget hotels failing so badly that at the worst one, 9 out of 10 guests left
+          a 1–2 star review. Reading 35,000 written reviews with AI assistance revealed
+          exactly why: cleanliness and room condition, nothing mysterious. The lesson I
+          carry into every project now — when a metric looks calm, ask what it's
+          averaging away.</p>
         <p class="insight-source">From the <a href="project-hotels.html">Hotel Reputation Analysis</a></p>
       </article>
 
