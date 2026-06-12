@@ -1,0 +1,67 @@
+<svg viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1200" height="675" fill="#0e1219"/>
+  <!-- Header -->
+  <text x="48" y="62" fill="#e8ecf4" font-size="28" font-weight="700">Amazon Sales — Revenue &amp; Leakage</text>
+  <text x="48" y="92" fill="#6b7689" font-size="15">127,200 cleaned rows · Apr–Jun 2022 · MySQL + Power BI · headline preview</text>
+  <rect x="950" y="40" width="202" height="36" rx="8" fill="#141925" stroke="#232a3a"/>
+  <text x="968" y="63" fill="#9aa5b8" font-size="14">Slicers: Month ▾ · State ▾</text>
+
+  <!-- KPI cards -->
+  <g>
+    <rect x="48" y="120" width="258" height="100" rx="12" fill="#141925" stroke="#232a3a"/>
+    <text x="68" y="152" fill="#6b7689" font-size="13">REALIZED REVENUE</text>
+    <text x="68" y="194" fill="#2dd4bf" font-size="32" font-weight="700">₹69.6M</text>
+
+    <rect x="330" y="120" width="258" height="100" rx="12" fill="#141925" stroke="#232a3a"/>
+    <text x="350" y="152" fill="#6b7689" font-size="13">REVENUE LEAKAGE</text>
+    <text x="350" y="194" fill="#f59e0b" font-size="32" font-weight="700">₹8.3M</text>
+
+    <rect x="612" y="120" width="258" height="100" rx="12" fill="#141925" stroke="#232a3a"/>
+    <text x="632" y="152" fill="#6b7689" font-size="13">CANCELLATION RATE</text>
+    <text x="632" y="194" fill="#f59e0b" font-size="32" font-weight="700">13.0%</text>
+
+    <rect x="894" y="120" width="258" height="100" rx="12" fill="#141925" stroke="#232a3a"/>
+    <text x="914" y="152" fill="#6b7689" font-size="13">AVG ORDER VALUE</text>
+    <text x="914" y="194" fill="#e8ecf4" font-size="32" font-weight="700">₹694</text>
+  </g>
+
+  <!-- Bar chart: revenue by category -->
+  <rect x="48" y="248" width="540" height="380" rx="12" fill="#141925" stroke="#232a3a"/>
+  <text x="72" y="284" fill="#e8ecf4" font-size="16" font-weight="600">Realized revenue by category (₹M)</text>
+  <g>
+    <rect x="100" y="320" width="64" height="280" fill="#2dd4bf"/>
+    <rect x="196" y="448" width="64" height="152" fill="#2dd4bf" opacity="0.8"/>
+    <rect x="292" y="521" width="64" height="79" fill="#22c55e" opacity="0.85"/>
+    <rect x="388" y="561" width="64" height="39" fill="#2dd4bf" opacity="0.45"/>
+    <rect x="484" y="588" width="64" height="12" fill="#2dd4bf" opacity="0.3"/>
+    <text x="112" y="310" fill="#2dd4bf" font-size="15" font-weight="700">34.7</text>
+    <text x="208" y="438" fill="#9aa5b8" font-size="15" font-weight="700">18.9</text>
+    <text x="308" y="511" fill="#22c55e" font-size="15" font-weight="700">9.8</text>
+    <text x="404" y="551" fill="#9aa5b8" font-size="15" font-weight="700">4.8</text>
+    <line x1="80" y1="600" x2="560" y2="600" stroke="#232a3a" stroke-width="2"/>
+    <text x="114" y="622" fill="#6b7689" font-size="12">Set</text>
+    <text x="206" y="622" fill="#6b7689" font-size="12">kurta</text>
+    <text x="284" y="622" fill="#6b7689" font-size="12">W. Dress ↑27%</text>
+    <text x="406" y="622" fill="#6b7689" font-size="12">Top</text>
+    <text x="492" y="622" fill="#6b7689" font-size="12">Others</text>
+  </g>
+  <text x="72" y="585" fill="#f59e0b" font-size="12">Set −31% — drives ~81% of the decline</text>
+
+  <!-- Monthly trend -->
+  <rect x="612" y="248" width="540" height="380" rx="12" fill="#141925" stroke="#232a3a"/>
+  <text x="636" y="284" fill="#e8ecf4" font-size="16" font-weight="600">Monthly realized revenue — decline accelerating</text>
+  <g>
+    <rect x="680" y="350" width="100" height="250" fill="#2dd4bf"/>
+    <rect x="840" y="372" width="100" height="228" fill="#2dd4bf" opacity="0.7"/>
+    <rect x="1000" y="402" width="100" height="198" fill="#f59e0b" opacity="0.85"/>
+    <text x="700" y="338" fill="#2dd4bf" font-size="16" font-weight="700">₹25.7M</text>
+    <text x="860" y="360" fill="#9aa5b8" font-size="16" font-weight="700">₹23.5M</text>
+    <text x="1020" y="390" fill="#f59e0b" font-size="16" font-weight="700">₹20.4M</text>
+    <text x="800" y="430" fill="#f59e0b" font-size="13" font-weight="600">−8.6%</text>
+    <text x="952" y="455" fill="#f59e0b" font-size="13" font-weight="600">−12.9%</text>
+    <line x1="660" y1="600" x2="1128" y2="600" stroke="#232a3a" stroke-width="2"/>
+    <text x="716" y="622" fill="#6b7689" font-size="12">Apr</text>
+    <text x="874" y="622" fill="#6b7689" font-size="12">May</text>
+    <text x="1036" y="622" fill="#6b7689" font-size="12">Jun</text>
+  </g>
+</svg>

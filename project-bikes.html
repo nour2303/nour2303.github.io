@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bike Sales Profitability Audit — Nour Eldin Khater</title>
+  <meta name="description" content="Case study: a 113,000-row Excel audit that proved ~50% of the dataset was fabricated using a leap-day test, then quantified discount-driven margin erosion from 51% to 31% on verified data.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80' fill='%232dd4bf' font-family='Arial' font-weight='bold'>N</text></svg>">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">N<span>K</span>.</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" aria-current="page">Projects</a></li>
+      <li><a href="insights.html">Insights</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a class="nav-cta" href="assets/cv/Nour_Khater_CV.pdf" download>Download CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page">
+  <div class="project-hero">
+    <div class="container">
+      <p class="breadcrumbs"><a href="projects.html">Projects</a> / Bike Sales Profitability Audit</p>
+      <h1>Bike Sales Profitability Audit<br><span class="accent">Half the dataset was fake. Proving it came first.</span></h1>
+      <p class="lede">A 113,000-row sales dataset, audited entirely in Excel. Before any
+        profitability work, a data-quality audit revealed that roughly half the rows
+        were fabricated — and the analysis only proceeded once that was proven, flagged
+        and isolated.</p>
+      <div class="tags">
+        <span class="tag">Excel</span>
+        <span class="tag">Formula-driven</span>
+        <span class="tag">Data-quality audit</span>
+        <span class="tag-neutral tag">Self-directed · 2026</span>
+      </div>
+      <div class="hero-actions" style="margin-top: 24px;">
+        <a class="btn btn-ghost" href="assets/docs/Bike_Sales_Audit_Workbook.xlsx" download>Download the audit workbook (Excel, 25 MB)</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" style="padding-top: 20px;">
+    <div class="container">
+      <figure class="figure-panel reveal">
+        <img src="assets/img/bike-dashboard.svg" alt="Bike sales audit Excel dashboard showing fabricated rows flagged, margin erosion by discount band and margin by product line">
+        <figcaption>Illustrative preview of the interactive Excel dashboard — audit KPIs, margin erosion by discount band, margin by product line.</figcaption>
+      </figure>
+
+      <div class="detail-grid">
+        <div class="detail-body">
+          <h2 class="reveal">The problem</h2>
+          <p class="reveal">The brief looked simple: analyse profitability across 113K
+            sales rows. But early exploration didn't add up — patterns repeated too
+            neatly. Instead of pushing on, the project pivoted:
+            <strong>is this data even real?</strong></p>
+
+          <h2 class="reveal">Proving the fabrication</h2>
+          <ul class="reveal">
+            <li><strong>The leap-day test</strong> — genuine multi-year transaction data
+              must contain sales on 29 February. A suspect block of rows contained
+              none, while the verified block did — a simple calendar fact the fabricator
+              forgot to fake.</li>
+            <li><strong>Row-matching</strong> — systematic comparison exposed suspect
+              rows as near-duplicates of genuine ones with altered values, confirming
+              they were generated, not recorded.</li>
+            <li><strong>Flagged, never deleted</strong> — every fabricated row was marked
+              with audit flags and excluded by formula, not removed. Anyone can re-run,
+              inspect or challenge the audit. <strong>Auditability over convenience.</strong></li>
+          </ul>
+          <div class="callout reveal">
+            ~50% of the dataset failed the audit. Every chart built on the full file
+            would have been confidently, invisibly wrong.
+          </div>
+
+          <h2 class="reveal">The profitability findings</h2>
+          <p class="reveal">On verified data only, the margin story was sharp:</p>
+          <ul class="reveal">
+            <li><strong>Discounting is the silent profit leak</strong> — margin erodes
+              from <strong>51% at full price to 31% at deep discounts</strong>. Each
+              discount band buys volume with disproportionate margin.</li>
+            <li><strong>Helmets out-earn bikes</strong> — at roughly <strong>59%
+              margin</strong>, the highest-ticket item isn't the most profitable one.
+              Accessories quietly carry the economics.</li>
+          </ul>
+
+          <h2 class="reveal">Why it matters</h2>
+          <p class="reveal">Everything here is <strong>100% formula-driven Excel</strong> —
+            audit flags, the verified-data layer and an interactive dashboard, with no
+            manual edits anywhere in the pipeline. It demonstrates two things at once:
+            deep Excel craft, and the analyst instinct that matters most —
+            <strong>validate before you analyse</strong>.</p>
+        </div>
+
+        <aside class="detail-aside reveal">
+          <div class="aside-block">
+            <h3>Key numbers</h3>
+            <ul class="key-numbers">
+              <li>Rows audited <span class="num">113,000</span></li>
+              <li>Fabricated rows <span class="num">~50%</span></li>
+              <li>Margin, full price <span class="num">51%</span></li>
+              <li>Margin, deep discount <span class="num">31%</span></li>
+              <li>Helmet margin <span class="num">~59%</span></li>
+            </ul>
+          </div>
+          <div class="aside-block">
+            <h3>Deliverables</h3>
+            <ul class="key-numbers">
+              <li>Audit layer with fraud flags</li>
+              <li>Verified-data analysis layer</li>
+              <li><a href="assets/docs/Bike_Sales_Audit_Workbook.xlsx" download>Interactive Excel workbook</a></li>
+            </ul>
+          </div>
+          <div class="aside-block">
+            <h3>Tools</h3>
+            <div class="tags" style="margin: 0;">
+              <span class="tag">Excel</span>
+              <span class="tag">Advanced formulas</span>
+              <span class="tag">Dashboarding</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="pagination-projects">
+        <a class="btn btn-ghost" href="project-hotels.html">← Hotel Reputation Analysis</a>
+        <a class="btn btn-primary" href="projects.html">All projects →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>© <span data-year>2026</span> Nour Eldin Khater · Data Analyst, Cairo</p>
+    <ul class="footer-links">
+      <li><a href="mailto:nourkhater39@gmail.com">Email</a></li>
+      <li><a href="https://www.linkedin.com/in/noureldin-essameldin-04339b347" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

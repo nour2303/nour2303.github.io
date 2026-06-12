@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Nour Eldin Khater</title>
+  <meta name="description" content="Data analysis projects by Nour Eldin Khater: Amazon sales profit analysis (130K+ rows), hotel reputation root-cause analysis (33,800 reviews), and a bike sales profitability and data-quality audit (113K rows).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80' fill='%232dd4bf' font-family='Arial' font-weight='bold'>N</text></svg>">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">N<span>K</span>.</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" aria-current="page">Projects</a></li>
+      <li><a href="insights.html">Insights</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a class="nav-cta" href="assets/cv/Nour_Khater_CV.pdf" download>Download CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page">
+  <div class="page-header">
+    <div class="container">
+      <span class="section-label">Projects</span>
+      <h1>276K+ rows.<br>Three business problems solved.</h1>
+      <p>Every project here is end-to-end and self-directed: raw, messy data in —
+        validated analysis, interactive dashboard and a clear recommendation out.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="card-grid">
+        <a class="project-card reveal" href="project-amazon.html">
+          <div class="project-card-thumb"><img src="assets/img/amazon-dashboard.svg" alt="Amazon sales analysis dashboard preview" loading="lazy"></div>
+          <div class="project-card-body">
+            <p class="project-card-meta">MySQL · Power BI · 131K rows</p>
+            <h3>Amazon Sales Analysis</h3>
+            <p>Cleaned 131K raw rows to 127K, built a star-schema model with 17 DAX
+              measures, and exposed an accelerating revenue decline: one category drove
+              81% of the drop, with ₹8.3M leaking to cancellations and returns.</p>
+            <div class="tags">
+              <span class="tag">Revenue leakage</span>
+              <span class="tag">Star schema</span>
+              <span class="tag">Stakeholder report</span>
+            </div>
+            <span class="project-card-link">Read the case study</span>
+          </div>
+        </a>
+
+        <a class="project-card reveal" href="project-hotels.html">
+          <div class="project-card-thumb"><img src="assets/img/hotel-dashboard.svg" alt="Hotel reputation analysis dashboard preview" loading="lazy"></div>
+          <div class="project-card-body">
+            <p class="project-card-meta">MySQL · Power BI · AI text mining · 33,783 reviews</p>
+            <h3>Hotel Reputation Analysis</h3>
+            <p>Rescued a silently-truncated import, fixed a mixed 1–5/1–10 rating scale,
+              then mined ~35K free-text reviews with AI to prove weak reputation
+              concentrates in budget brands — driven by cleanliness and room condition.
+              Named the 14 hotels to fix first.</p>
+            <div class="tags">
+              <span class="tag">Root-cause analysis</span>
+              <span class="tag">AI text mining</span>
+              <span class="tag">626 hotels</span>
+            </div>
+            <span class="project-card-link">Read the case study</span>
+          </div>
+        </a>
+
+        <a class="project-card reveal" href="project-bikes.html">
+          <div class="project-card-thumb"><img src="assets/img/bike-dashboard.svg" alt="Bike sales profitability audit dashboard preview" loading="lazy"></div>
+          <div class="project-card-body">
+            <p class="project-card-meta">Excel only · 113,000 rows · formula-driven</p>
+            <h3>Bike Sales Profitability Audit</h3>
+            <p>Discovered ~50% of the dataset was fabricated — and proved it with a
+              leap-day test and row-matching. Flagged (not deleted) the fake rows for
+              auditability, then quantified margin erosion from 51% at full price to 31%
+              at deep discounts on verified data.</p>
+            <div class="tags">
+              <span class="tag">Fraud detection</span>
+              <span class="tag">Margin analysis</span>
+              <span class="tag">100% Excel</span>
+            </div>
+            <span class="project-card-link">Read the case study</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <h2 class="reveal">Curious how I think?</h2>
+    <p class="reveal">The lessons these projects taught me — distilled into short,
+      honest insights.</p>
+    <a class="btn btn-primary reveal" href="insights.html">Read my insights</a>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>© <span data-year>2026</span> Nour Eldin Khater · Data Analyst, Cairo</p>
+    <ul class="footer-links">
+      <li><a href="mailto:nourkhater39@gmail.com">Email</a></li>
+      <li><a href="https://www.linkedin.com/in/noureldin-essameldin-04339b347" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

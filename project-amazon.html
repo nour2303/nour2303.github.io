@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Sales Analysis — Nour Eldin Khater</title>
+  <meta name="description" content="Case study: 131,146 raw Amazon India sales rows cleaned to 127,200 and analysed with MySQL and Power BI — ₹69.6M realized revenue, ₹8.3M leakage quantified, and the category collapse behind an accelerating revenue decline.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80' fill='%232dd4bf' font-family='Arial' font-weight='bold'>N</text></svg>">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">N<span>K</span>.</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" aria-current="page">Projects</a></li>
+      <li><a href="insights.html">Insights</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a class="nav-cta" href="assets/cv/Nour_Khater_CV.pdf" download>Download CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page">
+  <div class="project-hero">
+    <div class="container">
+      <p class="breadcrumbs"><a href="projects.html">Projects</a> / Amazon Sales Analysis</p>
+      <h1>Amazon Sales Analysis<br><span class="accent">₹8.3M was leaking. The decline was accelerating.</span></h1>
+      <p class="lede">An end-to-end analytics build on 131,146 raw rows of Amazon India
+        sales data (Apr–Jun 2022): cleaned and quality-assured in MySQL, modelled into a
+        star schema with 17 DAX measures, and delivered as a two-page interactive Power
+        BI dashboard plus a stakeholder report with prioritised actions.</p>
+      <div class="tags">
+        <span class="tag">SQL (MySQL)</span>
+        <span class="tag">Power BI</span>
+        <span class="tag">DAX</span>
+        <span class="tag-neutral tag">Self-directed · 2026</span>
+      </div>
+      <div class="hero-actions" style="margin-top: 24px;">
+        <a class="btn btn-ghost" href="assets/docs/Amazon_Sales_Report.pdf" target="_blank" rel="noopener">View the full report (PDF)</a>
+        <a class="btn btn-ghost" href="assets/docs/Amazon_Sales_Analysis.pbix" download>Download the Power BI file (.pbix)</a>
+        <a class="btn btn-ghost" href="assets/docs/Amazon_Sales_Raw_Data.zip" download>Download the raw data (CSV, zipped)</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" style="padding-top: 20px;">
+    <div class="container">
+      <figure class="figure-panel reveal">
+        <img src="assets/img/amazon-dashboard.svg" alt="Amazon sales analysis dashboard preview with revenue, leakage and category KPIs">
+        <figcaption>Preview of the headline numbers — the full charts, tables and recommendations are in the
+          <a href="assets/docs/Amazon_Sales_Report.pdf" target="_blank" rel="noopener">stakeholder report (PDF)</a>.</figcaption>
+      </figure>
+
+      <div class="detail-grid">
+        <div class="detail-body">
+          <h2 class="reveal">The problem</h2>
+          <p class="reveal">Three months of sales: <strong>₹69.6M in realized revenue</strong>
+            from roughly 107,000 completed orders. Healthy at first glance — but revenue
+            fell every month (₹25.7M → ₹23.5M → ₹20.4M) and the decline was
+            <strong>accelerating</strong> (−8.6%, then −12.9%). On top of that,
+            <strong>₹8.3M of potential revenue leaked away</strong> through cancellations
+            and returns. The questions: what's driving the fall, and where exactly is the
+            leakage?</p>
+
+          <h2 class="reveal">Cleaning before analysing</h2>
+          <p class="reveal">The raw export was far from analysis-ready. Before any
+            conclusions, 131,146 messy rows were reduced to a reliable 127,200-row table:</p>
+          <ul class="reveal">
+            <li><strong>2,210 exact duplicates and 1,754 fully-empty records removed</strong>
+              (~3% of the file), plus a junk column dropped.</li>
+            <li><strong>6,959 blank courier statuses resolved</strong> — 5,205 rows with
+              valid sale amounts were inferred as "Shipped", an imputation that doesn't
+              touch revenue figures.</li>
+            <li><strong>Types and headers fixed</strong> — amount and date columns arrived
+              as text; 24 messy headers standardised to snake_case. Result: zero nulls,
+              zero duplicates, single consistent currency.</li>
+          </ul>
+
+          <h2 class="reveal">The approach</h2>
+          <ul class="reveal">
+            <li><strong>SQL (MySQL) for analysis</strong> — profiling, CTEs, window
+              functions and conditional aggregation to break revenue down by category,
+              geography, channel and time.</li>
+            <li><strong>A leakage framework</strong> — separating realized revenue from
+              cancelled (₹6.9M) and returned/lost (₹1.4M) orders, so the topline and the
+              leak could be tracked independently.</li>
+            <li><strong>A star-schema Power BI model</strong> — date dimension and
+              <strong>17 DAX measures</strong> (revenue, leakage, rates, AOV,
+              time-intelligence), each one <strong>validated against the SQL source to
+              the rupee</strong>.</li>
+            <li><strong>A two-page interactive dashboard</strong> — KPIs, trend, category,
+              geography and leakage views with slicers, built for stakeholders to
+              self-serve.</li>
+          </ul>
+
+          <h2 class="reveal">What it found</h2>
+          <ul class="reveal">
+            <li><strong>The 'Set' category was collapsing</strong> — down 31% over the
+              quarter. As half the business (₹34.7M), it drove <strong>~81% of the entire
+              revenue drop</strong>. Rescuing it is the single biggest lever (~₹4M).</li>
+            <li><strong>Western Dress was the growth engine</strong> — up 27% while
+              everything else shrank, at a healthy ₹791 order value.</li>
+            <li><strong>Cancellations hit 13% of orders</strong>, with two regional
+              hotspots well above the norm: Kerala (16.5%) and Andhra Pradesh (15.2%).</li>
+            <li><strong>Concentration risk</strong> — 91% of revenue sat in just three
+              categories, and B2B orders, though small, spent more and cancelled far less
+              (7.9% vs 13%).</li>
+          </ul>
+          <div class="callout reveal">
+            The dashboard didn't just show that revenue was falling — it showed that one
+            category's collapse explained 81% of the fall, and named the two states where
+            cancellations were bleeding the most.
+          </div>
+
+          <h2 class="reveal">Why it matters</h2>
+          <p class="reveal">Every number a stakeholder sees traces back through a
+            validated DAX measure to a SQL query on cleaned data. The report frames each
+            finding as an action — rescue 'Set', fuel Western Dress, attack the two
+            cancellation hotspots — with the rupee value of each lever attached.
+            <em>Scope note: cost data wasn't available, so this measures revenue and
+            order quality, not net profit — and the report says so explicitly.</em></p>
+        </div>
+
+        <aside class="detail-aside reveal">
+          <div class="aside-block">
+            <h3>Key numbers</h3>
+            <ul class="key-numbers">
+              <li>Raw rows cleaned <span class="num">131,146</span></li>
+              <li>Analysis-ready rows <span class="num">127,200</span></li>
+              <li>Realized revenue <span class="num">₹69.6M</span></li>
+              <li>Leakage quantified <span class="num">₹8.3M</span></li>
+              <li>Cancellation rate <span class="num">13.0%</span></li>
+              <li>DAX measures <span class="num">17</span></li>
+            </ul>
+          </div>
+          <div class="aside-block">
+            <h3>Deliverables</h3>
+            <ul class="key-numbers">
+              <li>Two-page interactive dashboard</li>
+              <li>Star-schema data model</li>
+              <li><a href="assets/docs/Amazon_Sales_Report.pdf" target="_blank" rel="noopener">Stakeholder report (PDF)</a></li>
+            </ul>
+          </div>
+          <div class="aside-block">
+            <h3>Tools</h3>
+            <div class="tags" style="margin: 0;">
+              <span class="tag">MySQL</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">DAX</span>
+              <span class="tag">Star schema</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="pagination-projects">
+        <a class="btn btn-ghost" href="projects.html">← All projects</a>
+        <a class="btn btn-primary" href="project-hotels.html">Next: Hotel Reputation Analysis →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>© <span data-year>2026</span> Nour Eldin Khater · Data Analyst, Cairo</p>
+    <ul class="footer-links">
+      <li><a href="mailto:nourkhater39@gmail.com">Email</a></li>
+      <li><a href="https://www.linkedin.com/in/noureldin-essameldin-04339b347" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

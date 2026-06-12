@@ -1,0 +1,82 @@
+<svg viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1200" height="675" fill="#0e1219"/>
+  <!-- Header -->
+  <text x="48" y="62" fill="#e8ecf4" font-size="28" font-weight="700">Hotel Reputation — Root-Cause Dashboard</text>
+  <text x="48" y="92" fill="#6b7689" font-size="15">33,783 clean reviews · 626 hotels · 2011–2016 · MySQL + Power BI + AI text mining · headline preview</text>
+  <rect x="950" y="40" width="202" height="36" rx="8" fill="#141925" stroke="#232a3a"/>
+  <text x="968" y="63" fill="#9aa5b8" font-size="14">Filters: Brand ▾ · Year ▾</text>
+
+  <!-- KPI cards -->
+  <g>
+    <rect x="48" y="120" width="258" height="100" rx="12" fill="#141925" stroke="#232a3a"/>
+    <text x="68" y="152" fill="#6b7689" font-size="13">REVIEWS ANALYSED</text>
+    <text x="68" y="194" fill="#e8ecf4" font-size="32" font-weight="700">33,783</text>
+
+    <rect x="330" y="120" width="258" height="100" rx="12" fill="#141925" stroke="#232a3a"/>
+    <text x="350" y="152" fill="#6b7689" font-size="13">HOTELS EVALUATED</text>
+    <text x="350" y="194" fill="#e8ecf4" font-size="32" font-weight="700">626</text>
+
+    <rect x="612" y="120" width="258" height="100" rx="12" fill="#141925" stroke="#232a3a"/>
+    <text x="632" y="152" fill="#6b7689" font-size="13">OVERALL GUEST RATING</text>
+    <text x="632" y="194" fill="#2dd4bf" font-size="32" font-weight="700">3.76 / 5</text>
+
+    <rect x="894" y="120" width="258" height="100" rx="12" fill="#141925" stroke="#232a3a"/>
+    <text x="914" y="152" fill="#6b7689" font-size="13">PRIORITY PROBLEM HOTELS</text>
+    <text x="914" y="194" fill="#f59e0b" font-size="32" font-weight="700">14</text>
+  </g>
+
+  <!-- Complaint themes from AI text mining -->
+  <rect x="48" y="248" width="640" height="380" rx="12" fill="#141925" stroke="#232a3a"/>
+  <text x="72" y="284" fill="#e8ecf4" font-size="16" font-weight="600">What unhappy guests complain about (mentions in 1–2★ reviews)</text>
+  <g font-size="13">
+    <text x="72" y="328" fill="#9aa5b8">Breakfast / food</text>
+    <rect x="230" y="314" width="400" height="18" rx="4" fill="#6b7689"/>
+    <text x="588" y="328" fill="#e8ecf4" font-size="12" font-weight="700">1456</text>
+    <text x="72" y="366" fill="#9aa5b8">Cleanliness</text>
+    <rect x="230" y="352" width="382" height="18" rx="4" fill="#2dd4bf"/>
+    <text x="570" y="366" fill="#04211c" font-size="12" font-weight="700">1392</text>
+    <text x="72" y="404" fill="#9aa5b8">Bathroom</text>
+    <rect x="230" y="390" width="380" height="18" rx="4" fill="#2dd4bf"/>
+    <text x="568" y="404" fill="#04211c" font-size="12" font-weight="700">1384</text>
+    <text x="72" y="442" fill="#9aa5b8">Smell / odor</text>
+    <rect x="230" y="428" width="282" height="18" rx="4" fill="#2dd4bf" opacity="0.85"/>
+    <text x="520" y="442" fill="#9aa5b8" font-size="12" font-weight="700">1028</text>
+    <text x="72" y="480" fill="#9aa5b8">Smoking</text>
+    <rect x="230" y="466" width="143" height="18" rx="4" fill="#6b7689" opacity="0.7"/>
+    <text x="381" y="480" fill="#9aa5b8" font-size="12" font-weight="700">521</text>
+    <text x="72" y="518" fill="#9aa5b8">Noise</text>
+    <rect x="230" y="504" width="128" height="18" rx="4" fill="#6b7689" opacity="0.7"/>
+    <text x="366" y="518" fill="#9aa5b8" font-size="12" font-weight="700">466</text>
+    <text x="72" y="556" fill="#9aa5b8">Broken / outdated</text>
+    <rect x="230" y="542" width="125" height="18" rx="4" fill="#2dd4bf" opacity="0.6"/>
+    <text x="363" y="556" fill="#9aa5b8" font-size="12" font-weight="700">454</text>
+    <text x="72" y="594" fill="#9aa5b8">Bugs</text>
+    <rect x="230" y="580" width="123" height="18" rx="4" fill="#2dd4bf" opacity="0.6"/>
+    <text x="361" y="594" fill="#9aa5b8" font-size="12" font-weight="700">449</text>
+  </g>
+  <rect x="500" y="560" width="14" height="14" rx="3" fill="#2dd4bf"/>
+  <text x="522" y="572" fill="#6b7689" font-size="12">Hygiene / condition cluster</text>
+
+  <!-- Detractor rate by hotel -->
+  <rect x="712" y="248" width="440" height="380" rx="12" fill="#141925" stroke="#232a3a"/>
+  <text x="736" y="284" fill="#e8ecf4" font-size="16" font-weight="600">Detractor rate — share of 1–2★ reviews</text>
+  <g font-size="13">
+    <text x="736" y="334" fill="#9aa5b8">Norwood Inn</text>
+    <rect x="880" y="320" width="234" height="20" rx="4" fill="#f59e0b"/>
+    <text x="1078" y="335" fill="#04211c" font-size="13" font-weight="700">90%</text>
+    <text x="736" y="386" fill="#9aa5b8">Fiesta Inn &amp; Suites</text>
+    <rect x="880" y="372" width="226" height="20" rx="4" fill="#f59e0b" opacity="0.9"/>
+    <text x="1070" y="387" fill="#04211c" font-size="13" font-weight="700">87%</text>
+    <text x="736" y="438" fill="#9aa5b8">Days Inn Albany</text>
+    <rect x="880" y="424" width="184" height="20" rx="4" fill="#f59e0b" opacity="0.75"/>
+    <text x="1028" y="439" fill="#04211c" font-size="13" font-weight="700">71%</text>
+    <text x="736" y="490" fill="#9aa5b8">Super 8 Upland</text>
+    <rect x="880" y="476" width="174" height="20" rx="4" fill="#f59e0b" opacity="0.6"/>
+    <text x="1018" y="491" fill="#04211c" font-size="13" font-weight="700">67%</text>
+    <text x="736" y="542" fill="#9aa5b8">Red Roof Cedar Rapids</text>
+    <rect x="880" y="528" width="169" height="20" rx="4" fill="#f59e0b" opacity="0.5"/>
+    <text x="1013" y="543" fill="#04211c" font-size="13" font-weight="700">65%</text>
+  </g>
+  <text x="736" y="596" fill="#6b7689" font-size="13">Weak reputation concentrates in budget brands —</text>
+  <text x="736" y="616" fill="#6b7689" font-size="13">a brand-level cleanliness programme is the fix</text>
+</svg>

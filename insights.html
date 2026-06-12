@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insights — Nour Eldin Khater</title>
+  <meta name="description" content="How Nour Eldin Khater thinks about data: validate before you analyse, detractor rate beats averages, discounting is the silent profit leak, and AI text mining finds the why behind the score.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80' fill='%232dd4bf' font-family='Arial' font-weight='bold'>N</text></svg>">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">N<span>K</span>.</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="insights.html" aria-current="page">Insights</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a class="nav-cta" href="assets/cv/Nour_Khater_CV.pdf" download>Download CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page">
+  <div class="page-header">
+    <div class="container">
+      <span class="section-label">Insights</span>
+      <h1>How I think about data</h1>
+      <p>Short lessons, earned the honest way — from 276K+ rows of real, messy,
+        sometimes fabricated data. Each one changed how I work.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container" style="max-width: 820px;">
+
+      <article class="insight reveal">
+        <p class="insight-num">01</p>
+        <h2>Validate before you analyse — half a dataset can be fake</h2>
+        <p>In my bike sales audit, ~50% of 113,000 rows turned out to be fabricated. A
+          simple calendar fact exposed it: real multi-year sales data has transactions
+          on 29 February, and the fake rows didn't. If I had skipped the audit, every
+          chart would have been polished, confident — and wrong. Now no analysis of mine
+          starts before the data has earned my trust.</p>
+        <p class="insight-source">From the <a href="project-bikes.html">Bike Sales Profitability Audit</a></p>
+      </article>
+
+      <article class="insight reveal">
+        <p class="insight-num">02</p>
+        <h2>Detractor rate catches failing hotels faster than averages</h2>
+        <p>Averages are slow. A hotel can absorb hundreds of furious reviews and barely
+          move its mean score, because the happy majority dilutes the signal. The share
+          of clearly unhappy guests — the detractor rate — reacts immediately. Across
+          626 hotels, it flagged properties in trouble while their averages still looked
+          respectable; at the worst hotel, 90% of all reviews were 1–2 stars. Choose
+          metrics for how fast they detect change, not how familiar they look.</p>
+        <p class="insight-source">From the <a href="project-hotels.html">Hotel Reputation Analysis</a></p>
+      </article>
+
+      <article class="insight reveal">
+        <p class="insight-num">03</p>
+        <h2>Discounting is the silent profit leak</h2>
+        <p>Discounts feel like a growth lever because revenue keeps climbing. The margin
+          tells another story: in my bike sales analysis, profitability eroded from 51%
+          at full price to 31% at deep discounts — and the bestselling product wasn't
+          the most profitable one (helmets, at ~59% margin, out-earned the bikes).
+          Revenue dashboards hide this; margin dashboards expose it.</p>
+        <p class="insight-source">From the <a href="project-bikes.html">Bike Sales Profitability Audit</a></p>
+      </article>
+
+      <article class="insight reveal">
+        <p class="insight-num">04</p>
+        <h2>The numbers say "what" — only the text says "why"</h2>
+        <p>A 2-star rating tells you a guest is unhappy, not what to fix. Mining ~35,000
+          free-text reviews with AI assistance turned vague unhappiness into a ranked,
+          fixable list — with the hygiene-and-condition cluster (cleanliness, bathrooms,
+          smell, bugs) far outweighing everything else. Unstructured text is where the
+          actionable insight lives, and modern AI tooling finally makes it cheap to
+          harvest at scale.</p>
+        <p class="insight-source">From the <a href="project-hotels.html">Hotel Reputation Analysis</a></p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <h2 class="reveal">Want the full stories?</h2>
+    <p class="reveal">Each insight links back to a complete case study — problem,
+      method, findings.</p>
+    <a class="btn btn-primary reveal" href="projects.html">View the projects</a>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>© <span data-year>2026</span> Nour Eldin Khater · Data Analyst, Cairo</p>
+    <ul class="footer-links">
+      <li><a href="mailto:nourkhater39@gmail.com">Email</a></li>
+      <li><a href="https://www.linkedin.com/in/noureldin-essameldin-04339b347" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
