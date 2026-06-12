@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Insights — Nour Eldin Khater</title>
-  <meta name="description" content="How Nour Eldin Khater thinks about data: validate before you analyse, find the one lever behind the problem, check margin not just revenue, and never trust a calm average.">
+  <meta name="description" content="How Nour Eldin Khater thinks about data: validate before you analyse, find the one lever behind the problem, check margin not just revenue, and combine AI's scale with an analyst's judgement.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -51,9 +51,14 @@
           sales?</em> Real multi-year sales data always has leap-day transactions — and
           a huge block of my 113,000 rows had none. Row-matching confirmed it: roughly
           half the dataset was fabricated, copied from real rows with the values
-          changed. If I had jumped straight to charts, every one of them would have been
-          polished, confident — and wrong. Since that day, no dataset gets a dashboard
-          from me before it earns my trust.</p>
+          changed.</p>
+        <p style="margin-top: 14px;">And here's the part I'm most proud of: <strong>I
+          didn't delete a single fake row.</strong> Every one stayed in the Excel
+          workbook — flagged, and excluded by formulas only. Anyone can open the file
+          today, see exactly which rows were flagged and why, and challenge my call.
+          A finding you can audit is worth far more than a finding you have to take on
+          faith. Since that project, no dataset gets a dashboard from me before it
+          earns my trust.</p>
         <p class="insight-source">From the <a href="project-bikes.html">Bike Sales Profitability Audit</a></p>
       </article>
 
@@ -87,15 +92,21 @@
 
       <article class="insight reveal">
         <p class="insight-num">04</p>
-        <h2>A calm average can hide a crisis</h2>
-        <p>Across 626 hotels, guest satisfaction sat at 3.76 out of 5 — flat and stable
-          for years. No alarm bells anywhere. But that average was blending two very
-          different realities: upscale brands performing beautifully, and a group of
-          budget hotels failing so badly that at the worst one, 9 out of 10 guests left
-          a 1–2 star review. Reading 35,000 written reviews with AI assistance revealed
-          exactly why: cleanliness and room condition, nothing mysterious. The lesson I
-          carry into every project now — when a metric looks calm, ask what it's
-          averaging away.</p>
+        <h2>AI reads 35,000 reviews in a minute — but it still needs an analyst</h2>
+        <p>Reading 35,000 written guest reviews would take a human weeks — and spotting
+          the patterns across them, even longer. With AI-assisted text mining, it took
+          less than a minute: thousands of free-text complaints turned into a ranked
+          chart of exactly why guests were unhappy — cleanliness, bathrooms, smell,
+          bugs. That's work that simply wasn't practical before, done at the speed of a
+          coffee break.</p>
+        <p style="margin-top: 14px;">But AI didn't replace the analyst's eye. While
+          cleaning, I noticed the rating column didn't behave like a 1–5 scale — some
+          scores reached 10. I investigated and found the source had mixed a 1–5 and a
+          1–10 rating scale, traced the off-scale ratings to a specific handful of
+          hotels, and isolated them — leaving a clean 1–5 dataset of ~33,800 rated
+          reviews. <strong>Without catching this, every average rating would have been
+          wrong.</strong> That's the combination I work with: AI for scale, human
+          judgement for trust.</p>
         <p class="insight-source">From the <a href="project-hotels.html">Hotel Reputation Analysis</a></p>
       </article>
 
