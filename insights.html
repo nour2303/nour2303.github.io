@@ -52,13 +52,12 @@
           a huge block of my 113,000 rows had none. Row-matching confirmed it: roughly
           half the dataset was fabricated, copied from real rows with the values
           changed.</p>
-        <p style="margin-top: 14px;">And here's the part I'm most proud of: <strong>I
-          didn't delete a single fake row.</strong> Every one stayed in the Excel
-          workbook — flagged, and excluded by formulas only. Anyone can open the file
-          today, see exactly which rows were flagged and why, and challenge my call.
-          A finding you can audit is worth far more than a finding you have to take on
-          faith. Since that project, no dataset gets a dashboard from me before it
-          earns my trust.</p>
+        <p style="margin-top: 14px;">One thing I was careful about: I flagged the fake
+          rows rather than deleting them. Removing data isn't a call I make on my own —
+          you keep it until someone confirms it should go. So the rows stayed in the
+          workbook, excluded from the analysis by formula but still there for anyone to
+          check. Since that project, no dataset gets a dashboard from me before it earns
+          my trust.</p>
         <p class="insight-source">From the <a href="project-bikes.html">Bike Sales Profitability Audit</a></p>
       </article>
 
@@ -92,21 +91,20 @@
 
       <article class="insight reveal">
         <p class="insight-num">04</p>
-        <h2>AI reads 35,000 reviews in a minute — but it still needs an analyst</h2>
-        <p>Reading 35,000 written guest reviews would take a human weeks — and spotting
-          the patterns across them, even longer. With AI-assisted text mining, it took
-          less than a minute: thousands of free-text complaints turned into a ranked
-          chart of exactly why guests were unhappy — cleanliness, bathrooms, smell,
-          bugs. That's work that simply wasn't practical before, done at the speed of a
-          coffee break.</p>
-        <p style="margin-top: 14px;">But AI didn't replace the analyst's eye. While
-          cleaning, I noticed the rating column didn't behave like a 1–5 scale — some
-          scores reached 10. I investigated and found the source had mixed a 1–5 and a
-          1–10 rating scale, traced the off-scale ratings to a specific handful of
-          hotels, and isolated them — leaving a clean 1–5 dataset of ~33,800 rated
-          reviews. <strong>Without catching this, every average rating would have been
-          wrong.</strong> That's the combination I work with: AI for scale, human
-          judgement for trust.</p>
+        <h2>AI reads thousands of reviews in a minute — but it still needs an analyst</h2>
+        <p>Reading thousands of written guest reviews one by one would take a person
+          weeks, and finding the common threads across them would take even longer.
+          Using AI, I scanned them in a fraction of that time and turned what I found
+          into a chart. The big finding: most complaints came down to cleanliness and
+          room condition.</p>
+        <p style="margin-top: 14px;">But the part that mattered most came before any of
+          that. The ratings were meant to be 1 to 5 stars, but I noticed some went up to
+          10 — a few hotels had been recorded on a 1-to-10 scale by mistake. Looking
+          closer, three of them were cleanly on the 1-to-10 scale, so I converted those
+          down to 1-to-5; the other two were a confusing mix of both, so I left them out
+          rather than guess. <strong>Without that catch, every average rating would have
+          been wrong.</strong> AI is fast — but it takes a person to notice when the
+          numbers themselves can't be trusted.</p>
         <p class="insight-source">From the <a href="project-hotels.html">Hotel Reputation Analysis</a></p>
       </article>
 
