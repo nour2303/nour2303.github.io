@@ -36,9 +36,10 @@
       <p class="breadcrumbs"><a href="projects.html">Projects</a> / Amazon Sales Analysis</p>
       <h1>Amazon Sales Analysis<br><span class="accent">₹8.3M was leaking. The decline was accelerating.</span></h1>
       <p class="lede">An end-to-end analytics build on 131,146 raw rows of Amazon India
-        sales data (Apr–Jun 2022): cleaned and quality-assured in MySQL, modelled into a
-        star schema with 17 DAX measures, and delivered as a two-page interactive Power
-        BI dashboard plus a stakeholder report with prioritised actions.</p>
+        sales data from April to June 2022. I cleaned and quality-assured it in MySQL,
+        modelled it into a star schema with 17 DAX measures and delivered a two-page
+        interactive Power BI dashboard alongside a stakeholder report with prioritised
+        actions.</p>
       <div class="tags">
         <span class="tag">SQL (MySQL)</span>
         <span class="tag">Power BI</span>
@@ -57,20 +58,20 @@
     <div class="container">
       <figure class="figure-panel reveal">
         <img src="assets/img/amazon-dashboard.svg" alt="Amazon sales analysis dashboard preview with revenue, leakage and category KPIs">
-        <figcaption>Preview of the headline numbers — the full charts, tables and recommendations are in the
+        <figcaption>Preview of the headline numbers. The full charts, tables and recommendations live in the
           <a href="assets/docs/Amazon_Sales_Report.pdf" target="_blank" rel="noopener">stakeholder report (PDF)</a>.</figcaption>
       </figure>
 
       <div class="detail-grid">
         <div class="detail-body">
           <h2 class="reveal">The problem</h2>
-          <p class="reveal">Three months of sales: <strong>₹69.6M in realized revenue</strong>
-            from roughly 107,000 completed orders. Healthy at first glance — but revenue
-            fell every month (₹25.7M → ₹23.5M → ₹20.4M) and the decline was
-            <strong>accelerating</strong> (−8.6%, then −12.9%). On top of that,
-            <strong>₹8.3M of potential revenue leaked away</strong> through cancellations
-            and returns. The questions: what's driving the fall, and where exactly is the
-            leakage?</p>
+          <p class="reveal">Three months of sales brought in <strong>₹69.6M of realized
+            revenue</strong> from roughly 107,000 completed orders. It looked healthy at
+            first glance, but revenue fell every single month (₹25.7M → ₹23.5M → ₹20.4M)
+            and the decline kept <strong>speeding up</strong> (−8.6%, then −12.9%). On top
+            of that another <strong>₹8.3M of potential revenue leaked away</strong> through
+            cancellations and returns. So the real questions were what's driving the fall
+            and where exactly the money is going.</p>
 
           <h2 class="reveal">Cleaning before analysing</h2>
           <p class="reveal">The raw export was far from analysis-ready. Before any
@@ -117,18 +118,18 @@
               (7.9% vs 13%).</li>
           </ul>
           <div class="callout reveal">
-            The dashboard didn't just show that revenue was falling — it showed that one
-            category's collapse explained 81% of the fall, and named the two states where
-            cancellations were bleeding the most.
+            The dashboard didn't just show that revenue was falling. It showed that one
+            category's collapse explained 81% of the fall and even named the two states
+            where cancellations were bleeding the most.
           </div>
 
           <h2 class="reveal">Why it matters</h2>
           <p class="reveal">Every number a stakeholder sees traces back through a
-            validated DAX measure to a SQL query on cleaned data. The report frames each
-            finding as an action — rescue 'Set', fuel Western Dress, attack the two
-            cancellation hotspots — with the rupee value of each lever attached.
-            <em>Scope note: cost data wasn't available, so this measures revenue and
-            order quality, not net profit — and the report says so explicitly.</em></p>
+            validated DAX measure to a SQL query on cleaned data. The report turns each
+            finding into an action, whether that's rescuing 'Set', fuelling Western Dress
+            or attacking the two cancellation hotspots, with the money value of each lever
+            attached. <em>Scope note: cost data wasn't available, so this measures revenue
+            and order quality rather than net profit, and the report says so plainly.</em></p>
         </div>
 
         <aside class="detail-aside reveal">

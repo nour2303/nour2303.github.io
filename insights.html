@@ -35,8 +35,8 @@
     <div class="container">
       <span class="section-label">Insights</span>
       <h1>How I think about data</h1>
-      <p>Short lessons, earned the honest way — from 276K+ rows of real, messy,
-        sometimes fabricated data. Each one changed how I work.</p>
+      <p>Short lessons I earned the honest way, from 276K+ rows of real and messy data
+        that was sometimes even fabricated. Each one changed how I work.</p>
     </div>
   </div>
 
@@ -46,46 +46,46 @@
       <article class="insight reveal">
         <p class="insight-num">01</p>
         <h2>Validate before you analyse — half a dataset can be fake</h2>
-        <p>In my bike sales audit, the numbers looked fine at first glance. Then one
+        <p>In my bike sales audit the numbers looked fine at first glance. Then one
           simple question broke the whole thing open: <em>where are the February 29th
-          sales?</em> Real multi-year sales data always has leap-day transactions — and
-          a huge block of my 113,000 rows had none. Row-matching confirmed it: roughly
-          half the dataset was fabricated, copied from real rows with the values
-          changed.</p>
-        <p style="margin-top: 14px;">One thing I was careful about: I flagged the fake
-          rows rather than deleting them. Removing data isn't a call I make on my own —
-          you keep it until someone confirms it should go. So the rows stayed in the
-          workbook, excluded from the analysis by formula but still there for anyone to
-          check. Since that project, no dataset gets a dashboard from me before it earns
-          my trust.</p>
+          sales?</em> Real multi-year sales data always has leap-day transactions, and a
+          huge block of my 113,000 rows had none. Row-matching confirmed it, and roughly
+          half the dataset turned out to be fabricated, copied from real rows with the
+          values changed.</p>
+        <p style="margin-top: 14px;">One thing I was careful about was flagging the fake
+          rows instead of deleting them. Removing data isn't a call I make on my own, so
+          you keep it until someone confirms it should go. The rows stayed in the
+          workbook and were left out of the analysis by formula, but they're still there
+          for anyone to check. Since that project no dataset gets a dashboard from me
+          before it earns my trust.</p>
         <p class="insight-source">From the <a href="project-bikes.html">Bike Sales Profitability Audit</a></p>
       </article>
 
       <article class="insight reveal">
         <p class="insight-num">02</p>
         <h2>Don't just describe the problem — find the lever</h2>
-        <p>"Revenue is down 13%" is a fact. It's not a finding. In my Amazon analysis,
-          revenue was falling month after month, and the easy move was to report twenty
-          observations and let the stakeholder sort it out. Digging deeper showed that
-          one category — 'Set', half the business — was behind roughly 81% of the entire
-          drop. That one number changes the meeting: instead of "sales are declining,"
-          the conversation becomes "fix this one category and you recover most of the
-          loss." Stakeholders don't need more charts. They need to know which lever to
-          pull first.</p>
+        <p>"Revenue is down 13%" is a fact and not a finding. In my Amazon analysis
+          revenue was falling month after month, and the easy move would have been to
+          hand over twenty observations and let the stakeholder sort it out. Digging
+          deeper showed that a single category called 'Set', which was half the whole
+          business, sat behind roughly 81% of the entire drop. That one number changes
+          the whole meeting. Instead of "sales are declining" the conversation becomes
+          "fix this one category and you recover most of the loss". Stakeholders don't
+          need more charts. They need to know which lever to pull first.</p>
         <p class="insight-source">From the <a href="project-amazon.html">Amazon Sales Analysis</a></p>
       </article>
 
       <article class="insight reveal">
         <p class="insight-num">03</p>
         <h2>Discounting looks like growth — until you check the margin</h2>
-        <p>Revenue dashboards love discounts: every promotion makes the line go up, so
-          discounting feels like a growth lever. The margin tells a different story. On
-          verified bike sales data, profitability fell from 51% at full price to 31% at
-          deep discounts — the business was buying volume and quietly paying for it in
-          profit. And the bestseller wasn't the best earner: helmets made ~59% margin
-          while the bikes themselves did the heavy, low-margin lifting. If you only
-          track revenue, discounting looks like success. Track margin, and it's often a
-          leak.</p>
+        <p>Revenue dashboards love discounts. Every promotion makes the line go up, so
+          discounting feels like a growth lever. The margin tells a very different
+          story. On the verified bike sales data profitability fell from 51% at full
+          price down to 31% at deep discounts, which meant the business was buying volume
+          and quietly paying for it in profit. The bestseller wasn't even the best
+          earner, since helmets made about 59% margin while the bikes did the heavy
+          low-margin lifting. If you only track revenue discounting looks like success,
+          but track margin and it's often a leak.</p>
         <p class="insight-source">From the <a href="project-bikes.html">Bike Sales Profitability Audit</a></p>
       </article>
 
@@ -94,17 +94,17 @@
         <h2>AI reads thousands of reviews in a minute — but it still needs an analyst</h2>
         <p>Reading thousands of written guest reviews one by one would take a person
           weeks, and finding the common threads across them would take even longer.
-          Using AI, I scanned them in a fraction of that time and turned what I found
-          into a chart. The big finding: most complaints came down to cleanliness and
-          room condition.</p>
+          Using AI I scanned them all in a fraction of that time and turned what I found
+          into a chart. The big finding was that most complaints came down to
+          cleanliness and room condition.</p>
         <p style="margin-top: 14px;">But the part that mattered most came before any of
-          that. The ratings were meant to be 1 to 5 stars, but I noticed some went up to
-          10 — and tracing it down, the problem came from just 5 hotels out of 626 that
-          had been recorded on a 1-to-10 scale by mistake. Looking closer, three of them
-          were cleanly on the 1-to-10 scale, so I converted those down to 1-to-5; the
-          other two were a confusing mix of both, so I left them out rather than guess.
+          that. The ratings were meant to be 1 to 5 stars, yet I noticed some went up to
+          10. Tracing it down, the problem came from just 5 hotels out of 626 that had
+          been recorded on a 1-to-10 scale by mistake. Three of them were cleanly on the
+          1-to-10 scale so I converted those down to 1-to-5, while the other two were a
+          confusing mix of both so I left them out rather than guess.
           <strong>Without that catch, every average rating would have been wrong.</strong>
-          AI is fast — but it takes a person to notice when the numbers themselves can't
+          AI is fast, but it takes a person to notice when the numbers themselves can't
           be trusted.</p>
         <p class="insight-source">From the <a href="project-hotels.html">Hotel Reputation Analysis</a></p>
       </article>
@@ -114,8 +114,8 @@
 
   <section class="cta-band">
     <h2 class="reveal">Want the full stories?</h2>
-    <p class="reveal">Each insight links back to a complete case study — problem,
-      method, findings.</p>
+    <p class="reveal">Each insight links back to a full case study with the problem, the
+      method and the findings.</p>
     <a class="btn btn-primary reveal" href="projects.html">View the projects</a>
   </section>
 </main>
