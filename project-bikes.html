@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bike Sales Profitability Audit — Nour Eldin Khater</title>
-  <meta name="description" content="Case study: a 113,000-row Excel audit that proved ~50% of the dataset was fabricated using a leap-day test, then quantified discount-driven margin erosion from 51% to 31% on verified data.">
+  <title>Bike Sales Profitability Audit · Nour Eldin Khater</title>
+  <meta name="description" content="Case study: a 113,000-row Excel audit that proved almost half of the dataset was fabricated using a leap-day test, then quantified discount-driven margin erosion from 51% to 31% on verified data.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -46,6 +46,7 @@
         <span class="tag-neutral tag">Self-directed · 2026</span>
       </div>
       <div class="hero-actions" style="margin-top: 24px;">
+        <a class="btn btn-ghost" href="assets/docs/Bike_Sales_Report.pdf" target="_blank" rel="noopener">View the full report (PDF)</a>
         <a class="btn btn-ghost" href="assets/docs/Bike_Sales_Audit_Workbook.xlsx" download>Download the audit workbook (Excel, 25 MB)</a>
       </div>
     </div>
@@ -68,14 +69,14 @@
 
           <h2 class="reveal">Proving the fabrication</h2>
           <ul class="reveal">
-            <li><strong>The leap-day test</strong> — genuine multi-year transaction data
+            <li><strong>The leap-day test</strong>: genuine multi-year transaction data
               must contain sales on 29 February. A suspect block of rows contained
-              none, while the verified block did — a simple calendar fact the fabricator
-              forgot to fake.</li>
-            <li><strong>Row-matching</strong> — systematic comparison exposed suspect
+              none, while the verified block did. It was a simple calendar fact the
+              fabricator forgot to fake.</li>
+            <li><strong>Row-matching</strong>: systematic comparison exposed suspect
               rows as near-duplicates of genuine ones with altered values, confirming
               they were generated, not recorded.</li>
-            <li><strong>Flagged, never deleted</strong> — every fabricated row was marked
+            <li><strong>Flagged, never deleted</strong>: every fabricated row was marked
               with audit flags and excluded by formula, not removed. Anyone can re-run,
               inspect or challenge the audit. <strong>Auditability over convenience.</strong></li>
           </ul>
@@ -87,10 +88,10 @@
           <h2 class="reveal">The profitability findings</h2>
           <p class="reveal">On the verified data the margin story was sharp:</p>
           <ul class="reveal">
-            <li><strong>Discounting is the silent profit leak</strong> — margin erodes
+            <li><strong>Discounting is the silent profit leak</strong>: margin erodes
               from <strong>51% at full price to 31% at deep discounts</strong>. Each
               discount band buys volume with disproportionate margin.</li>
-            <li><strong>Helmets out-earn bikes</strong> — at roughly <strong>59%
+            <li><strong>Helmets out-earn bikes</strong>: at roughly <strong>59%
               margin</strong>, the highest-ticket item isn't the most profitable one.
               Accessories quietly carry the economics.</li>
           </ul>

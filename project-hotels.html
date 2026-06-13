@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hotel Reputation Analysis — Nour Eldin Khater</title>
-  <meta name="description" content="Case study: ~35,900 raw guest reviews cleaned to 33,783 across 626 hotels, mined with AI-assisted text analysis — proving weak reputation concentrates in budget brands and is driven by cleanliness and room condition.">
+  <title>Hotel Reputation Analysis · Nour Eldin Khater</title>
+  <meta name="description" content="Case study: ~35,900 raw guest reviews cleaned to 33,783 across 626 hotels, mined with AI-assisted text analysis to prove weak reputation sits in budget brands and comes down to cleanliness and room condition.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -72,11 +72,11 @@
 
           <h2 class="reveal">Earning the data's trust first</h2>
           <ul class="reveal">
-            <li><strong>Caught a silent import failure</strong> — the standard MySQL
+            <li><strong>Caught a silent import failure</strong>: the standard MySQL
               import loaded only 764 of ~35,900 rows without erroring. Diagnosed the
               truncation, scripted a reliable bulk load, verified the count, and fixed
               character encoding so international hotel names rendered correctly.</li>
-            <li><strong>Caught a mixed rating scale</strong> — the rating column didn't
+            <li><strong>Caught a mixed rating scale</strong>: the rating column didn't
               behave like 1–5; some scores reached 10. Tracing it down, just 5 hotels out
               of 626 had been recorded on a 1–10 scale by mistake. Three were cleanly on
               1–10, so I converted those
@@ -84,40 +84,40 @@
               scales, so I left them out rather than guess. With ~300 junk zero-rated
               records and 304 duplicates also removed, that left a clean 1–5 dataset of
               33,783 reviews. Without this catch, every average would have been wrong.</li>
-            <li><strong>Set a fairness threshold</strong> — only hotels with 10+ reviews
+            <li><strong>Set a fairness threshold</strong>: only hotels with 10+ reviews
               get ranked, so one angry guest can't sink a hotel's standing.</li>
           </ul>
 
           <h2 class="reveal">The approach</h2>
           <ul class="reveal">
-            <li><strong>Look past the average</strong> — tracked the <strong>detractor
+            <li><strong>Look past the average</strong>: tracked the <strong>detractor
               rate</strong> (share of 1–2 star reviews) alongside the mean. At one hotel,
               90% of all reviews were 1–2 stars while portfolio averages looked calm.</li>
-            <li><strong>AI-assisted text mining at scale</strong> — read ~35,000 rows of
+            <li><strong>AI-assisted text mining at scale</strong>: read ~35,000 rows of
               free-text review content to detect and count recurring complaint themes:
-              cleanliness, bathrooms, odour, noise, pests — turning unstructured text
-              into a ranked chart of <em>why</em> guests were unhappy.</li>
-            <li><strong>Five reputation tiers</strong> — every ranked hotel classified
+              cleanliness, bathrooms, odour, noise and pests, then turned that
+              unstructured text into a ranked chart of <em>why</em> guests were unhappy.</li>
+            <li><strong>Five reputation tiers</strong>: every ranked hotel classified
               Superb → Terrible on a Booking.com-style scale, plus year-over-year
               movement to spot risers and decliners.</li>
-            <li><strong>Three-page Power BI dashboard</strong> — executive overview,
+            <li><strong>Three-page Power BI dashboard</strong>: executive overview,
               reputation trends, and a brand / root-cause deep dive, backed by DAX
               measures and calculated tables.</li>
           </ul>
 
           <h2 class="reveal">What it found</h2>
           <ul class="reveal">
-            <li><strong>Reputation tracks the price tier almost perfectly</strong> —
+            <li><strong>Reputation tracks the price tier almost perfectly</strong>:
               upscale brands average ~4★+; budget chains cluster at the bottom. The
               problem is structural, which is why a brand-level fix beats chasing
               individual hotels.</li>
-            <li><strong>Hygiene and room condition drive the anger</strong> — in 1–2 star
+            <li><strong>Hygiene and room condition drive the anger</strong>: in 1–2 star
               reviews, cleanliness, bathrooms, smell and bugs together far outweigh
               everything else. Guests forgive "basic"; they don't forgive "dirty".</li>
-            <li><strong>14 priority hotels were named</strong> — including one averaging
+            <li><strong>14 priority hotels were named</strong>: including one averaging
               1.46★ over 533 reviews, with nearly 9 in 10 guests leaving a detractor
               review.</li>
-            <li><strong>The problem is fixable</strong> — one budget-brand hotel gained
+            <li><strong>The problem is fixable</strong>: one budget-brand hotel gained
               almost a full star in a single year, proving the tier isn't doomed.</li>
           </ul>
           <div class="callout reveal">

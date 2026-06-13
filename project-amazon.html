@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amazon Sales Analysis — Nour Eldin Khater</title>
-  <meta name="description" content="Case study: 131,146 raw Amazon India sales rows cleaned to 127,200 and analysed with MySQL and Power BI — ₹69.6M realized revenue, ₹8.3M leakage quantified, and the category collapse behind an accelerating revenue decline.">
+  <title>Amazon Sales Analysis · Nour Eldin Khater</title>
+  <meta name="description" content="Case study: 131,146 raw Amazon India sales rows cleaned to 127,200 and analysed with MySQL and Power BI. ₹69.6M realized revenue, ₹8.3M of leakage quantified, and the category collapse behind an accelerating revenue decline.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -79,41 +79,41 @@
           <ul class="reveal">
             <li><strong>2,210 exact duplicates and 1,754 fully-empty records removed</strong>
               (~3% of the file), plus a junk column dropped.</li>
-            <li><strong>6,959 blank courier statuses resolved</strong> — 5,205 rows with
+            <li><strong>6,959 blank courier statuses resolved</strong>: 5,205 rows with
               valid sale amounts were inferred as "Shipped", an imputation that doesn't
               touch revenue figures.</li>
-            <li><strong>Types and headers fixed</strong> — amount and date columns arrived
+            <li><strong>Types and headers fixed</strong>: amount and date columns arrived
               as text; 24 messy headers standardised to snake_case. Result: zero nulls,
               zero duplicates, single consistent currency.</li>
           </ul>
 
           <h2 class="reveal">The approach</h2>
           <ul class="reveal">
-            <li><strong>SQL (MySQL) for analysis</strong> — profiling, CTEs, window
+            <li><strong>SQL (MySQL) for analysis</strong>: profiling, CTEs, window
               functions and conditional aggregation to break revenue down by category,
               geography, channel and time.</li>
-            <li><strong>A leakage framework</strong> — separating realized revenue from
+            <li><strong>A leakage framework</strong>: separating realized revenue from
               cancelled (₹6.9M) and returned/lost (₹1.4M) orders, so the topline and the
               leak could be tracked independently.</li>
-            <li><strong>A star-schema Power BI model</strong> — date dimension and
+            <li><strong>A star-schema Power BI model</strong>: date dimension and
               <strong>17 DAX measures</strong> (revenue, leakage, rates, AOV,
               time-intelligence), each one <strong>double-checked against the SQL
               source so every number matched exactly</strong>.</li>
-            <li><strong>A two-page interactive dashboard</strong> — KPIs, trend, category,
+            <li><strong>A two-page interactive dashboard</strong>: KPIs, trend, category,
               geography and leakage views with slicers, built for stakeholders to
               self-serve.</li>
           </ul>
 
           <h2 class="reveal">What it found</h2>
           <ul class="reveal">
-            <li><strong>The 'Set' category was collapsing</strong> — down 31% over the
+            <li><strong>The 'Set' category was collapsing</strong>: down 31% over the
               quarter. As half the business (₹34.7M), it drove <strong>~81% of the entire
               revenue drop</strong>. Rescuing it is the single biggest lever (~₹4M).</li>
-            <li><strong>Western Dress was the growth engine</strong> — up 27% while
+            <li><strong>Western Dress was the growth engine</strong>: up 27% while
               everything else shrank, at a healthy ₹791 order value.</li>
             <li><strong>Cancellations hit 13% of orders</strong>, with two regional
               hotspots well above the norm: Kerala (16.5%) and Andhra Pradesh (15.2%).</li>
-            <li><strong>Concentration risk</strong> — 91% of revenue sat in just three
+            <li><strong>Concentration risk</strong>: 91% of revenue sat in just three
               categories, and B2B orders, though small, spent more and cancelled far less
               (7.9% vs 13%).</li>
           </ul>
