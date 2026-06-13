@@ -76,8 +76,9 @@
               truncation, scripted a reliable bulk load, verified the count, and fixed
               character encoding so international hotel names rendered correctly.</li>
             <li><strong>Caught a mixed rating scale</strong> — the rating column didn't
-              behave like 1–5; some scores reached 10. A few hotels had been recorded on
-              a 1–10 scale by mistake. Three were cleanly on 1–10, so I converted those
+              behave like 1–5; some scores reached 10. Tracing it down, just 5 hotels out
+              of 626 had been recorded on a 1–10 scale by mistake. Three were cleanly on
+              1–10, so I converted those
               down to 1–5 and kept them; the other two were a confusing mix of both
               scales, so I left them out rather than guess. With ~300 junk zero-rated
               records and 304 duplicates also removed, that left a clean 1–5 dataset of
