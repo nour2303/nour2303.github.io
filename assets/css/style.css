@@ -289,6 +289,30 @@ main.page { padding-top: 68px; }
 .page-header h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin-bottom: 16px; }
 .page-header p { color: var(--text-muted); max-width: 660px; font-size: 1.05rem; }
 
+/* About hero with portrait */
+.about-hero {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+.about-hero-text { flex: 1; min-width: 0; }
+.about-portrait { flex-shrink: 0; }
+.about-portrait img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 38%;
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 50px rgba(45, 212, 191, 0.22);
+}
+
+@media (max-width: 820px) {
+  .about-hero { flex-direction: column; align-items: flex-start; gap: 36px; }
+  .about-portrait { align-self: center; }
+  .about-portrait img { width: 220px; height: 220px; }
+}
+
 /* ---------- Cards ---------- */
 
 .card-grid {
