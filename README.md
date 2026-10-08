@@ -1,36 +1,17 @@
 # Nour Eldin Khater — Portfolio
 
-Personal portfolio site for Nour Eldin Khater, Data Analyst (Cairo, Egypt).
+**[View the live portfolio](https://nour2303.github.io/)**
 
-**Live:** https://nour2303.github.io
+A personal portfolio focused on data analysis and workflow automation. It brings the project stories together in one place, with ways to contact me about a role or a freelance project.
 
-## Pages
+## Selected work
 
-- `index.html` — home: hero, key stats, featured projects
-- `about.html` — background, education, experience, method
-- `projects.html` — project overview, linking to three case studies:
-  - `project-amazon.html` — Amazon Sales Analysis (SQL, Excel, Power BI, 130K+ rows)
-  - `project-hotels.html` — Hotel Reputation Analysis (SQL, Power BI, AI text mining, 33,800 reviews)
-  - `project-bikes.html` — Bike Sales Profitability Audit (Excel, 113K rows)
-- `insights.html` — short written insights from the projects
-- `skills.html` — grouped toolkit
-- `contact.html` — email, LinkedIn, GitHub, CV download
+- **Sales Analysis:** Excel audit and dashboard for product margins and discounts.
+- **E-commerce Sales Analysis:** SQL and Power BI analysis of falling revenue, cancellations, returns and growth areas.
+- **Firm Assistant:** n8n workflow for questions about documents and database records.
+- **Research & Report Automation:** workflow that turns gathered web sources into a PDF report for review.
+- **AI Voice Receptionist:** workflow design for routine calls, bookings and human handoff.
 
-## Stack
+The site is built with HTML, CSS and JavaScript. The analytics dashboard images are illustrative previews; project explanations describe the work and its evidence limits.
 
-Plain HTML, CSS and JavaScript — no frameworks, no build step. Fonts from Google
-Fonts (Inter, Space Grotesk).
-
-The dashboard images in `assets/img/` are illustrative SVG previews; to use real
-dashboard screenshots, replace them (keeping 16:9 proportions) and update the
-`<img>` `src` attributes if the file extensions change.
-
-## Local preview
-
-Any static server works, e.g.:
-
-```
-npx http-server -p 8137 .
-```
-
-Then open http://localhost:8137
+The current homepage is `index.html`. Older pages remain in the repository for reference.
