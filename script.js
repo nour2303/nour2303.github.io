@@ -132,6 +132,12 @@ document.querySelectorAll('[data-workflow]').forEach(link=>link.addEventListener
  updateInquiryMode('project');
 }));
 
+document.querySelectorAll('[data-voice-service]').forEach(link=>link.addEventListener('click',()=>{
+ serviceSelect.value='AI voice receptionist';
+ serviceForm.elements.project.value='AI Voice Receptionist';
+ updateInquiryMode('project');
+}));
+
 document.querySelectorAll('[data-analysis-project]').forEach(link=>link.addEventListener('click',()=>{
  serviceSelect.value='Data analysis';
  serviceForm.elements.project.value=link.dataset.analysisProject;
