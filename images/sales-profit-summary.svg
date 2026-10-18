@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Which sales kept more profit</title>
+  <desc id="desc">A portfolio summary showing a 38.3 percent overall margin, 51 percent on full price sales, 31 percent on sales with discounts above 15 percent, and about 59 percent on helmets.</desc>
+  <rect width="1600" height="900" fill="#f5f8fa"/>
+  <rect width="1600" height="12" fill="#176b9c"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="64" y="63" fill="#176b9c" font-size="26" font-weight="700">SALES PROFITABILITY  /  EXCEL</text>
+    <text x="64" y="130" fill="#122d3e" font-size="62" font-weight="700">Which sales kept more profit?</text>
+    <text x="66" y="174" fill="#577184" font-size="30">Bike sales project  |  Verified sales</text>
+    <path d="M64 190 H1536" stroke="#d9e5e9" stroke-width="3"/>
+
+    <g fill="#fff" stroke="#d6e4e8" stroke-width="2">
+      <rect x="64" y="216" width="350" height="160" rx="18"/>
+      <rect x="438" y="216" width="350" height="160" rx="18"/>
+      <rect x="812" y="216" width="350" height="160" rx="18"/>
+      <rect x="1186" y="216" width="350" height="160" rx="18"/>
+    </g>
+    <g font-size="22" font-weight="700" fill="#557184">
+      <text x="92" y="254">OVERALL MARGIN</text>
+      <text x="466" y="254">FULL PRICE</text>
+      <text x="840" y="254">LARGE DISCOUNTS</text>
+      <text x="1214" y="254">HELMETS</text>
+    </g>
+    <g font-size="64" font-weight="700" fill="#122d3e">
+      <text x="92" y="326">38.3%</text>
+      <text x="466" y="326">51%</text>
+      <text x="840" y="326">31%</text>
+      <text x="1214" y="326" font-size="52">About 59%</text>
+    </g>
+    <g font-size="22" fill="#587285">
+      <text x="92" y="358">on verified sales</text>
+      <text x="466" y="358">profit margin</text>
+      <text x="840" y="358">discount above 15%</text>
+      <text x="1214" y="358">profit margin</text>
+    </g>
+
+    <rect x="64" y="402" width="830" height="384" rx="20" fill="#fff" stroke="#d6e4e8" stroke-width="2"/>
+    <text x="94" y="461" fill="#122d3e" font-size="40" font-weight="700">Bigger discounts had lower margins</text>
+    <text x="94" y="500" fill="#587285" font-size="25">Profit margin in the verified sales</text>
+    <g fill="#557184" font-size="24" font-weight="700">
+      <text x="94" y="577">FULL PRICE</text>
+      <text x="94" y="687">DISCOUNT ABOVE 15%</text>
+    </g>
+    <rect x="430" y="541" width="300" height="45" rx="9" fill="#e8eff2"/>
+    <rect x="430" y="541" width="257" height="45" rx="9" fill="#176b9c"/>
+    <rect x="430" y="651" width="300" height="45" rx="9" fill="#e8eff2"/>
+    <rect x="430" y="651" width="155" height="45" rx="9" fill="#b95244"/>
+    <g fill="#122d3e" font-size="34" font-weight="700">
+      <text x="773" y="575">51%</text>
+      <text x="773" y="685">31%</text>
+    </g>
+    <text x="94" y="757" fill="#587285" font-size="24">These are past results, not a prediction.</text>
+
+    <rect x="918" y="402" width="618" height="384" rx="20" fill="#183b4a"/>
+    <text x="954" y="459" fill="#a9dbf2" font-size="26" font-weight="700">WHAT TO REVIEW</text>
+    <text x="954" y="527" fill="#fff" font-size="48" font-weight="700">Discount rules</text>
+    <path d="M954 560 H1500" stroke="#74939e" stroke-width="2"/>
+    <text x="954" y="612" fill="#dcebf0" font-size="29">Sales with discounts above 15%</text>
+    <text x="954" y="653" fill="#dcebf0" font-size="29">had the lowest margins.</text>
+    <text x="954" y="711" fill="#a8dae0" font-size="27">95% of sales had a discount.</text>
+    <text x="954" y="753" fill="#a8dae0" font-size="27">Review which products need one.</text>
+
+    <path d="M64 825 H1536" stroke="#d9e5e9" stroke-width="3"/>
+    <text x="64" y="862" fill="#587285" font-size="23">PORTFOLIO SUMMARY  |  Based on the project report</text>
+    <text x="1536" y="862" fill="#587285" font-size="23" text-anchor="end">Results from 56,017 verified sales.</text>
+  </g>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Where online sales fell</title>
+  <desc id="desc">A portfolio summary showing revenue fell 20.6 percent, one product group made up about 81 percent of the drop, three groups made up 91 percent of sales, and one clothing group grew 27 percent.</desc>
+  <rect width="1600" height="900" fill="#f5f8fa"/>
+  <rect width="1600" height="12" fill="#0b7f79"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="64" y="63" fill="#087e79" font-size="26" font-weight="700">ONLINE SALES  /  POWER BI</text>
+    <text x="64" y="130" fill="#122d3e" font-size="62" font-weight="700">Where sales fell</text>
+    <text x="66" y="174" fill="#577184" font-size="30">Three months of completed orders</text>
+    <path d="M64 190 H1536" stroke="#d9e5e9" stroke-width="3"/>
+
+    <g fill="#fff" stroke="#d6e4e8" stroke-width="2">
+      <rect x="64" y="216" width="350" height="160" rx="18"/>
+      <rect x="438" y="216" width="350" height="160" rx="18"/>
+      <rect x="812" y="216" width="350" height="160" rx="18"/>
+      <rect x="1186" y="216" width="350" height="160" rx="18"/>
+    </g>
+    <g font-size="22" font-weight="700" fill="#557184">
+      <text x="92" y="254">REVENUE FELL</text>
+      <text x="466" y="254">BIGGEST SOURCE</text>
+      <text x="840" y="254">SALES MIX</text>
+      <text x="1214" y="254">GROWTH</text>
+    </g>
+    <g font-size="64" font-weight="700" fill="#122d3e">
+      <text x="92" y="326">20.6%</text>
+      <text x="466" y="326">81%</text>
+      <text x="840" y="326">91%</text>
+      <text x="1214" y="326">27%</text>
+    </g>
+    <g font-size="22" fill="#587285">
+      <text x="92" y="358">April to June</text>
+      <text x="466" y="358">of the total drop</text>
+      <text x="840" y="358">from three groups</text>
+      <text x="1214" y="358">one clothing group</text>
+    </g>
+
+    <rect x="64" y="402" width="830" height="384" rx="20" fill="#fff" stroke="#d6e4e8" stroke-width="2"/>
+    <text x="94" y="461" fill="#122d3e" font-size="40" font-weight="700">Sales fell each month</text>
+    <text x="94" y="500" fill="#587285" font-size="25">Revenue from completed orders, shown as a trend</text>
+    <path d="M130 709 H836" stroke="#d9e5e9" stroke-width="3"/>
+    <rect x="192" y="548" width="142" height="161" rx="10" fill="#0b7f79"/>
+    <rect x="411" y="568" width="142" height="141" rx="10" fill="#5f9fa4"/>
+    <rect x="630" y="587" width="142" height="122" rx="10" fill="#b95244"/>
+    <g fill="#557184" font-size="25" font-weight="700" text-anchor="middle">
+      <text x="263" y="748">APRIL</text>
+      <text x="482" y="748">MAY</text>
+      <text x="701" y="748">JUNE</text>
+    </g>
+
+    <rect x="918" y="402" width="618" height="384" rx="20" fill="#183b4a"/>
+    <text x="954" y="459" fill="#9ddedb" font-size="26" font-weight="700">WHERE TO START</text>
+    <text x="954" y="527" fill="#fff" font-size="45" font-weight="700">Look at the biggest</text>
+    <text x="954" y="583" fill="#fff" font-size="45" font-weight="700">drop first</text>
+    <path d="M954 612 H1500" stroke="#74939e" stroke-width="2"/>
+    <text x="954" y="657" fill="#dcebf0" font-size="27">One product group made up most</text>
+    <text x="954" y="695" fill="#dcebf0" font-size="27">of the fall in sales.</text>
+    <text x="954" y="744" fill="#a8dae0" font-size="25">Also check cancelled and returned orders.</text>
+
+    <path d="M64 825 H1536" stroke="#d9e5e9" stroke-width="3"/>
+    <text x="64" y="862" fill="#587285" font-size="23">PORTFOLIO SUMMARY  |  Based on the project report</text>
+    <text x="1536" y="862" fill="#587285" font-size="23" text-anchor="end">No profit figure because cost data was not available.</text>
+  </g>
+</svg>
