@@ -17,6 +17,27 @@ filters.forEach(button => button.addEventListener('click', () => selectCategory(
 document.querySelectorAll('[data-select]').forEach(link => link.addEventListener('click', () => selectCategory(link.dataset.select)));
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Lightweight visitor counter (increments once per browser session, displays quietly in footer)
+(async function trackVisits() {
+  const counterEl = document.getElementById('visit-counter');
+  if (!counterEl) return;
+  try {
+    const counted = sessionStorage.getItem('nk_visit_counted');
+    const endpoint = counted
+      ? 'https://abacus.jasoncameron.dev/get/nour2303.github.io/visits'
+      : 'https://abacus.jasoncameron.dev/hit/nour2303.github.io/visits';
+    const res = await fetch(endpoint);
+    if (!res.ok) return;
+    const data = await res.json();
+    if (data && typeof data.value === 'number') {
+      sessionStorage.setItem('nk_visit_counted', '1');
+      counterEl.textContent = `· ${data.value.toLocaleString()} VISITS`;
+    }
+  } catch {
+    // Fail silently if blocked by adblocker or offline
+  }
+})();
+
 // Floating navigation: real section links, with tooltips for pointer and keyboard.
 const iconPaths = {
  home:'<path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-8H9v8H4a1 1 0 0 1-1-1z"/>',
@@ -41,7 +62,6 @@ let scrollPending = false;
 function markCurrentSection(){
  let current='home';
  for(const [id] of sections){const el=document.getElementById(id);if(el.getBoundingClientRect().top < innerHeight*.45)current=id;}
- // Follow physical page order: about and expertise are intentionally reversed in the dock.
  const passed=sections.map(([id])=>document.getElementById(id)).filter(el=>el.getBoundingClientRect().top<innerHeight*.45).sort((a,b)=>b.offsetTop-a.offsetTop);
  if(passed.length)current=passed[0].id;
  dockLinks.forEach(link=>{const active=link.dataset.section===current;link.classList.toggle('current',active);if(active)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});
@@ -54,7 +74,6 @@ dock.addEventListener('pointermove',event=>{
 });
 dock.addEventListener('pointerleave',()=>dock.querySelectorAll('.dock-item').forEach(item=>item.style.removeProperty('--magnify')));
 
-// A subtle custom halo keeps the ordinary pointer available.
 const halo=document.createElement('div');halo.className='pointer-halo';halo.setAttribute('aria-hidden','true');document.body.append(halo);
 addEventListener('pointermove',event=>{if(!finePointer.matches||motionQuery.matches)return;halo.style.left=event.clientX+'px';halo.style.top=event.clientY+'px';halo.classList.add('visible');halo.classList.toggle('over-link',!!event.target.closest('a,button'));},{passive:true});
 document.documentElement.addEventListener('pointerleave',()=>halo.classList.remove('visible'));
@@ -63,7 +82,6 @@ document.querySelectorAll('.expertise-card,.project-preview').forEach(card=>{
  card.addEventListener('pointerleave',()=>{card.style.transform='';});
 });
 
-// Lightweight animated network: abstract nodes and connections, not a stock image.
 const hero=document.querySelector('.hero');
 const canvas=document.createElement('canvas');canvas.className='network-canvas';canvas.setAttribute('aria-hidden','true');hero.prepend(canvas);
 const ctx=canvas.getContext('2d');let width=0,height=0,points=[],frame=0,visible=true;
@@ -79,7 +97,10 @@ document.querySelectorAll('.section-heading,.expertise-card,.about-copy,.portrai
 
 const serviceForm = document.getElementById('service-form');
 const inquiryResult = document.getElementById('inquiry-result');
-serviceForm.addEventListener('submit', event => {
+const inquiryStatus = document.getElementById('inquiry-status');
+const submitBtn = document.getElementById('submit-btn');
+
+serviceForm.addEventListener('submit', async event => {
  event.preventDefault();
  if (!serviceForm.reportValidity()) return;
  const values = new FormData(serviceForm);
@@ -89,6 +110,43 @@ serviceForm.addEventListener('submit', event => {
  document.getElementById('gmail-draft').href = 'https://mail.google.com/mail/?' + new URLSearchParams({view:'cm',fs:'1',to:'nourkhater39@gmail.com',su:subject,body});
  document.getElementById('email-draft').href = `mailto:nourkhater39@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
  document.getElementById('draft-text').value = `To: nourkhater39@gmail.com\nSubject: ${subject}\n\n${body}`;
+
+ if (submitBtn) {
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+ }
+ let sentDirectly = false;
+ try {
+  const res = await fetch('https://formsubmit.co/ajax/nourkhater39@gmail.com', {
+   method: 'POST',
+   headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+   body: JSON.stringify({
+    _subject: subject,
+    name: value('name'),
+    email: value('email'),
+    service: value('service'),
+    project_or_role: value('project'),
+    details: value('details'),
+    timeline: value('timeline') || 'Not specified',
+    _captcha: 'false'
+   })
+  });
+  const json = await res.json().catch(() => ({}));
+  sentDirectly = res.ok && (json.success === 'true' || json.success === true);
+ } catch {
+  sentDirectly = false;
+ } finally {
+  if (submitBtn) {
+   submitBtn.disabled = false;
+   submitBtn.textContent = 'Send message';
+  }
+ }
+
+ if (inquiryStatus) {
+  inquiryStatus.textContent = sentDirectly
+   ? 'Message sent directly to Nour! You can also open a copy in your email app below.'
+   : 'Your draft is ready. Choose where to open it below to send directly to Nour.';
+ }
  inquiryResult.hidden = false;
  document.getElementById('copy-status').textContent = '';
  document.getElementById('gmail-draft').focus({preventScroll:true});
