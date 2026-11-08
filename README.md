@@ -2,16 +2,12 @@
 
 **[View the live portfolio](https://nour2303.github.io/)**
 
-A personal portfolio focused on data analysis and workflow automation. It brings the project stories together in one place, with ways to contact me about a role or a freelance project.
+Portfolio website showcasing data analysis dashboards and AI workflow automation projects by Nour Eldin Khater.
 
 ## Selected work
 
-- **Sales Analysis:** Excel audit and dashboard for product margins and discounts.
-- **E-commerce Sales Analysis:** SQL and Power BI analysis of falling revenue, cancellations, returns and growth areas.
-- **Firm Assistant:** n8n workflow for questions about documents and database records.
-- **Research & Report Automation:** workflow that turns gathered web sources into a PDF report for review.
-- **AI Voice Receptionist:** workflow design for routine calls, bookings and human handoff.
-
-The site is built with HTML, CSS and JavaScript. The analytics dashboard images are illustrative previews; project explanations describe the work and its evidence limits.
-
-The current homepage is `index.html`. Older pages remain in the repository for reference.
+- **[Sales Analysis](https://github.com/nour2303/sales-profitability-analysis):** Excel data quality audit across 113,000 records and profitability dashboard analyzing product margins and discount impact.
+- **[E-commerce Sales Analysis](https://github.com/nour2303/ecommerce-sales-analysis):** MySQL cleaning and Power BI dashboard analyzing 131,000+ sales records, revenue concentration, cancellations, and category growth.
+- **[Firm Assistant](https://github.com/nour2303/firm-assistant):** Three-workflow n8n RAG and read-only SQL assistant with semantic caching, guardrails, and automated evaluations.
+- **[Research & Report Automation](https://github.com/nour2303/research-automation):** Four-workflow multi-agent n8n pipeline that gathers web sources, verifies exact quotations, and compiles cited PDF reports with comparison charts.
+- **[AI Voice Receptionist](https://github.com/nour2303/nile-auto-ai-voice-receptionist):** Bilingual (English & Egyptian Arabic) AI voice receptionist built with ElevenLabs, n8n, Google Calendar, Google Sheets, and Vonage SMS.
